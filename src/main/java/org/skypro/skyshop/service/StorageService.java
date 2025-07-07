@@ -14,11 +14,13 @@ import java.util.*;
 public class StorageService {
     private final Map<UUID, Product> products;
     private final Map<UUID, Article> articles;
+    private final Map<UUID, Product> availableProducts;
 
     public StorageService(){
         this.products = new HashMap<>();
         this.articles = new HashMap<>();
         createTestData();
+        this.availableProducts = new HashMap<>();
     }
 
     public Collection<Product> getProducts(){
@@ -45,5 +47,9 @@ public class StorageService {
         result.addAll(getProducts());
         result.addAll(getArticles());
         return result;
+    }
+
+    public Optional<Product> getProductsById(UUID id) {
+        return Optional.ofNullable(availableProducts.get(id));
     }
 }

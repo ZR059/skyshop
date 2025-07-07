@@ -56,4 +56,5 @@ public abstract class Product implements Searchable {
     public int hashCode() {
         return name.hashCode();
     }
+
 }
