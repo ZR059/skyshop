@@ -19,7 +19,7 @@ public class ShopController {
     private final SearchService searchService;
     private final BasketService basketService;
 
-    public ShopController(StorageService storageService, SearchService searchService, BasketService basketService) {
+    public ShopController(StorageService storageService, SearchService searchService, BasketService basketService)  {
         this.storageService = storageService;
         this.searchService = searchService;
         this.basketService = basketService;
