@@ -11,6 +11,14 @@ public final class SearchResult {
         this.contentType = contentType;
     }
 
+    public String getProductName() {
+        return name;
+    }
+
+    public String getContentType() {
+        return contentType;
+    }
+
     public static SearchResult fromSearchable (Searchable searchable) {
         return new SearchResult(searchable.getID().toString()
                 , searchable.getName()
